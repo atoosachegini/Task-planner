@@ -11,7 +11,9 @@ import time
 import random
 
 # --- DeepSeek API Setup ---
-client = OpenAI(api_key="sk-fedfd017b2074130a55a15c251670da0", base_url="https://api.deepseek.com")
+import os
+client = OpenAI(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
+
 
 TASKS_FILE = "tasks.json"
 DONE_FILE = "done_tasks.json"
